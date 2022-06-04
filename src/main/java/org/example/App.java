@@ -7,6 +7,7 @@ import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -74,6 +75,8 @@ public class App
 
             String slideBgUrl = slideBg.getAttribute("src");
             //下载对应图片
+            downloadImg(slideBlockUrl,"slideBlock.png");
+            downloadImg(slideBgUrl,"slideBg.png");
             double  slideDistance=getSlideDistance(System.getProperty("user.dir")+"slideBlock.png",System.getProperty("user.dir")+"slideBg.png");
 
 
@@ -193,10 +196,8 @@ public class App
     public static boolean isElementPresent(WebDriver driver, By by){
         try{
             driver.findElement(by);
-            System.out.println("isElementPresent--true");
             return true;
         }catch(Exception e){
-            System.out.println("isElementPresent--false");
             return false;
         }
     }
