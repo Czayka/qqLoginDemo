@@ -20,4 +20,9 @@
 
 
 ## 使用方法
-账号密码填入application.properties格式账号=密码
+1. 账号密码填入application.properties格式账号=密码
+
+2. 使用Maven打包运行打好的包或导入idea中运行
+
+3. 需要下载opencv
+
